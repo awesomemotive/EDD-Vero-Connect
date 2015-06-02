@@ -1,0 +1,14 @@
+.edd-vero-connect-error {
+    font-weight: bold;
+    color: #dd3d36;
+}
+
+.edd-vero-connect-success {
+    font-weight: bold;
+    color: #7ad03a;
+}
+
+.edd-vero-connect-warning {
+    font-weight: bold;
+    color: #ffba00;
+}
