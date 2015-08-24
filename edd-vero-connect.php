@@ -287,14 +287,8 @@ if( ! class_exists( 'EDD_Vero_Connect' ) ) {
 
                 if( $cart_items ) {
                     foreach( $cart_items as $key => $cart_item ) {
-                        $item_id        = isset( $payment_meta['cart_details'] ) ? $cart_item['id'] : $cart_item;
-                        $price_override = isset( $payment_meta['cart_details'] ) && ! isset( $payment_meta['subtotal'] ) ? $cart_item['price'] : null;
-
-                        if( $price_override ) {
-                            $price = edd_get_download_final_price( $item_id, $user_info, $price_override );
-                        } else {
-                            $price = $download['price'];
-                        }
+                        $item_id    = isset( $payment_meta['cart_details'] ) ? $cart_item['id'] : $cart_item;
+                        $price      = $download['price'];
 
                         try {
                             $products = array(
