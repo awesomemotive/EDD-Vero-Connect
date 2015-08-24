@@ -148,6 +148,7 @@ if( ! class_exists( 'EDD_Vero_Connect' ) ) {
                 try {
                     $this->api = new Vero( $token );
                 } catch( Exception $e ) {
+                    edd_record_gateway_error( __( 'EDD Vero Connect Error', 'edd-vero-connect' ), print_r( $e->getMessage(), true ) );
                     return;
                 }
             }
@@ -276,6 +277,7 @@ if( ! class_exists( 'EDD_Vero_Connect' ) ) {
                         )
                     );
                 } catch( Exception $e ) {
+                    edd_record_gateway_error( __( 'EDD Vero Connect Error', 'edd-vero-connect' ), print_r( $e->getMessage(), true ) );
                     return;
                 }
 
@@ -318,6 +320,7 @@ if( ! class_exists( 'EDD_Vero_Connect' ) ) {
                                 $products
                             );
                         } catch( Exception $e ) {
+                            edd_record_gateway_error( __( 'EDD Vero Connect Error', 'edd-vero-connect' ), print_r( $e->getMessage(), true ) );
                             return;
                         }
                     }
