@@ -185,13 +185,13 @@ if( ! class_exists( 'EDD_Vero_Connect' ) ) {
                 array(
                     'id'    => 'edd_vero_connect_sandbox_auth_token',
                     'name'  => __( 'Sandbox Auth Token', 'edd-vero-connect' ),
-                    'desc'  => sprintf( __( 'Enter your Vero sandbox auth token (can be found <a href="%s" target="_blank">here</a>)', 'edd-vero-connect' ), 'https://app.getvero.com/account/api-keys' ),
+                    'desc'  => sprintf( __( 'Enter your Vero sandbox auth token (can be found <a href="%s" target="_blank">here</a>)', 'edd-vero-connect' ), 'https://app.getvero.com/settings/project' ),
                     'type'  => 'text'
                 ),
                 array(
                     'id'    => 'edd_vero_connect_production_auth_token',
                     'name'  => __( 'Production Auth Token', 'edd-vero-connect' ),
-                    'desc'  => sprintf( __( 'Enter your Vero production auth token (can be found <a href="%s" target="_blank">here</a>)', 'edd-vero-connect' ), 'https://app.getvero.com/account/api-keys' ),
+                    'desc'  => sprintf( __( 'Enter your Vero production auth token (can be found <a href="%s" target="_blank">here</a>)', 'edd-vero-connect' ), 'https://app.getvero.com/settings/project' ),
                     'type'  => 'text'
                 ),
                 array(
