@@ -145,7 +145,11 @@ if( ! class_exists( 'EDD_Vero_Connect' ) ) {
             }
 
             if( $token ) {
-                $this->api = new Vero( $token );
+                try {
+                    $this->api = new Vero( $token );
+                } catch( Exception $e ) {
+                    return;
+                }
             }
         }
 
