@@ -125,7 +125,7 @@ if( ! class_exists( 'EDD_Vero_Connect' ) ) {
 
             // Handle licensing
             if( class_exists( 'EDD_License' ) ) {
-                $license = new EDD_License( __FILE__, 'Download All', EDD_VERO_CONNECT_VER, 'Daniel J Griffiths' );
+                $license = new EDD_License( __FILE__, 'Vero Connect', EDD_VERO_CONNECT_VER, 'Daniel J Griffiths' );
             }
         }
 
