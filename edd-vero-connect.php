@@ -222,9 +222,7 @@ if( ! class_exists( 'EDD_Vero_Connect' ) ) {
         public function add_fields() {
             ob_start();
 
-            if( edd_get_option( 'edd_vero_connect_auto_subscribe' ) ) {
-                echo '<input name="edd_vero_connect_signup" id="edd_vero_connect_signup" type="hidden" value="true" />';
-            } else {
+            if( ! edd_get_option( 'edd_vero_connect_auto_subscribe' ) ) {
                 echo '<fieldset id="edd_vero_connect">';
                 echo '<label for="edd_vero_connect_signup">';
                 echo '<input name="edd_vero_connect_signup" id="edd_vero_connect_signup" type="checkbox" checked="checked" />';
@@ -248,7 +246,7 @@ if( ! class_exists( 'EDD_Vero_Connect' ) ) {
          * @return      void
          */
         public function signup_check( $posted, $user_info, $valid_data ) {
-            if( isset( $posted['edd_vero_connect_signup'] ) ) {
+            if( isset( $posted['edd_vero_connect_signup'] ) || edd_get_option( 'edd_vero_connect_auto_subscribe' ) ) {
                 $this->subscribe = true;
             }
         }
