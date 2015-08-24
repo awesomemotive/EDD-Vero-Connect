@@ -26,7 +26,6 @@ function edd_vero_connect_api_status() {
         $status = '<span class="edd-vero-connect-error">' . __( 'Disconnected: Enter Auth Token to continue', 'edd-vero-connect' ) . '</span>';
     }
 
-    var_dump( EDD_Vero_Connect()->api );
     echo $status;
 }
 add_action( 'edd_vero_connect_api_status', 'edd_vero_connect_api_status' );
